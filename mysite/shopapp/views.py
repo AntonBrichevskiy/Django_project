@@ -232,7 +232,7 @@ class UserOrdersExportView(View):
 @method_decorator(staff_member_required, name="dispatch")
 class OrdersExportView(View):
     def get(self, request):
-        cache_key = "orders_export_all"
+        cache_key = f"orders_export_user_{request.user.id}"
 
         cached_data = cache.get(cache_key)
         if cached_data is not None:
