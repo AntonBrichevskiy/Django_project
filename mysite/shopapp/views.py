@@ -19,13 +19,13 @@ from rest_framework.decorators import action
 from django_filters.rest_framework import DjangoFilterBackend
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
-from .serializers import OrderSerializer
 from django.contrib.admin.views.decorators import staff_member_required
 
 from .common import save_csv_products
 from .forms import ProductForm
 from .models import Product, Order, ProductImage
 from .serializers import ProductSerializer
+from .serializers import OrderSerializer
 
 
 class ProductViewSet(ModelViewSet):
