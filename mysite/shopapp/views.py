@@ -243,16 +243,3 @@ class OrdersExportView(View):
         cache.set(cache_key, serializer.data, 300)
 
         return JsonResponse(serializer.data, safe=False)
-
-
-
-
-
-
-
-
-
-
-
-
-
